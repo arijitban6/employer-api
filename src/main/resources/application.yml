@@ -1,0 +1,14 @@
+server:
+  port: 8081
+
+
+spring:
+  datasource:
+    url: jdbc:oracle:thin:@localhost:1521:XE
+    username: java_user
+    password: java_user
+    driver-class-name: oracle.jdbc.OracleDriver
+  jpa:
+    show-sql: true
+#  jpa:
+#    database-platform: database-platform

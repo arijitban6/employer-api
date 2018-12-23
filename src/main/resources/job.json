@@ -1,0 +1,28 @@
+{
+  "data": {
+    "type": "job",
+    "id": "sampleId",
+    "attributes": {
+      "jobName": "sampleName",
+      "jobDescription": "sampleDescription",
+      "projectName": "sampleProject",
+      "location": "location1",
+      "employeeBand": "B2",
+      "experienceInMonths": 24,
+      "numberOfOpenings": 12,
+      "creationDate": "12/23/2018",
+      "primarySkills": [
+        "skill1",
+        "skill2"
+      ],
+      "optionalSkills": [
+        "skill1",
+        "skill2"
+      ]
+    }
+  },
+  "links": {
+    "self": "selfLink",
+    "uri2": "link2"
+  }
+}

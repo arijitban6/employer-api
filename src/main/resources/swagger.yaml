@@ -1,0 +1,111 @@
+swagger: "2.0"
+info:
+  description: "This is a sample server Petstore server.  You can find out more about     Swagger at [http://swagger.io](http://swagger.io) or on [irc.freenode.net, #swagger](http://swagger.io/irc/).      For this sample, you can use the api key `special-key` to test the authorization     filters."
+  version: "1.0.0"
+  title: "Swagger Petstore"
+  termsOfService: "http://swagger.io/terms/"
+  contact:
+    email: "apiteam@swagger.io"
+  license:
+    name: "Apache 2.0"
+    url: "http://www.apache.org/licenses/LICENSE-2.0.html"
+host: "petstore.swagger.io"
+basePath: "/v2"
+tags:
+- name: "user"
+  description: "Operations about user"
+  externalDocs:
+    description: "Find out more about our store"
+    url: "http://swagger.io"
+schemes:
+- "https"
+- "http"
+paths:
+  /user:
+    post:
+      tags:
+      - "user"
+      summary: "Create user"
+      description: "This can only be done by the logged in user."
+      operationId: "createUser"
+      produces:
+      - "application/xml"
+      - "application/json"
+      parameters:
+      - in: "body"
+        name: "body"
+        description: "Created user object"
+        required: true
+        schema:
+          $ref: "#/definitions/jobTopLevel"
+      responses:
+        default:
+          description: "successful operation"
+definitions:
+  jobTopLevel:
+    type: "object"
+    properties:
+      data:
+        $ref: "#/definitions/data"
+      links:
+        $ref: "#/definitions/links"
+  data:
+    type: "object"
+    properties:
+      type:
+        type: "string"
+        example: "job"
+      id:
+        type: "string"
+        example: "sampleId"
+      attributes:
+        $ref: "#/definitions/attributes"
+  attributes:
+    type: "object"
+    properties:
+      jobName:
+        type: "string"
+        example: "smpleJobName"
+      jobDescription:
+        type: "string"
+        example: "smpleJobDescription"
+      projectName:
+        type: "string"
+        example: "smpleProjectName"
+      location:
+        type: "string"
+        example: "smpleLocation"
+      employeeBand:
+        type: "string"
+        example: "smpleEmployeeBand"
+      experienceInMonths:
+        type: "integer"
+        example: 24
+      numberOfOpenings:
+        type: "integer"
+        example: 10
+      creationDate:
+        type: "string"
+        example: "12/06/2018"
+      primarySkills:
+        $ref: "#/definitions/Skills"
+      optionalSkills:
+        $ref: "#/definitions/Skills"
+        
+  Skills:
+    type: "array"
+    items:
+      type: string
+      example: sampleSkill
+      
+  links:
+    type: "object"
+    properties:
+      self:
+        type: "string"
+      uri2:
+        type: "string"
+  
+externalDocs:
+  description: "Find out more about Swagger"
+  url: "http://swagger.io"
