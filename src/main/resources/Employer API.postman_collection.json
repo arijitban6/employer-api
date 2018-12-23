@@ -1,0 +1,65 @@
+{
+	"id": "f34c19d0-7d4c-458d-956c-eb507514db44",
+	"name": "Employer API",
+	"description": "",
+	"auth": null,
+	"events": null,
+	"variables": [],
+	"order": [
+		"83d3c5cf-3145-4138-b9cd-5eb8bfbecd58",
+		"2107a8c2-2453-48d5-a71a-3efd151d08aa"
+	],
+	"folders_order": [],
+	"folders": [],
+	"requests": [
+		{
+			"id": "2107a8c2-2453-48d5-a71a-3efd151d08aa",
+			"name": "Post - Job",
+			"url": "http://localhost:8081/job",
+			"description": "",
+			"data": [],
+			"dataMode": "raw",
+			"headerData": [
+				{
+					"key": "Accept",
+					"value": "application/json",
+					"description": "",
+					"type": "text",
+					"enabled": true
+				},
+				{
+					"key": "Content-Type",
+					"name": "Content-Type",
+					"value": "application/json",
+					"description": "",
+					"type": "text"
+				}
+			],
+			"method": "POST",
+			"pathVariableData": [],
+			"queryParams": [],
+			"auth": null,
+			"events": null,
+			"folder": null,
+			"rawModeData": "{\n    \"data\": {\n        \"type\": \"Job\",\n        \"attributes\": {\n            \"jobName\": \"TestName\",\n            \"jobDescription\": \"TestDesc\",\n            \"projectName\": \"TestProject\",\n            \"location\": \"TestLocation\",\n            \"employeeBand\": \"TestBand\",\n            \"experienceInMonths\": 10,\n            \"numberOfOpenings\": 5,\n            \"primarySkills\": [\n                \"java\",\n                \"HTML\"\n            ],\n            \"optionalSkills\": [\n                \"JSON\",\n                \"Spring\",\n                \"fsad\",\n                \"test\"\n            ]\n        }\n    },\n    \"links\": {\n        \"self\": \"/job/1\",\n        \"uri2\": null\n    }\n}",
+			"headers": "Accept: application/json\nContent-Type: application/json\n",
+			"pathVariables": {}
+		},
+		{
+			"id": "83d3c5cf-3145-4138-b9cd-5eb8bfbecd58",
+			"name": "Get- JobById",
+			"url": "http://localhost:8081/job/116",
+			"description": "",
+			"data": null,
+			"dataMode": null,
+			"headerData": null,
+			"method": "GET",
+			"pathVariableData": [],
+			"queryParams": [],
+			"auth": null,
+			"events": null,
+			"folder": null,
+			"pathVariables": {}
+		}
+	]
+}
